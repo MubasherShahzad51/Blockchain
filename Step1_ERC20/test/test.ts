@@ -35,6 +35,6 @@ describe("Our Demo Token", function () {
     await demoToken.connect(addr1).approve(owner.address, ethers.utils.parseEther("1000"));
     await demoToken.transfer(addr1.address, ethers.utils.parseEther("1000"));
     await demoToken.transferFrom(addr1.address, addr2.address, ethers.utils.parseEther("1000"));
-    expect(await demoToken.balanceOf(addr2.address)).to.equal(ethers.utils.parseEther("1000"));
+    expect(await demoToken.balanceOf(addr2.address)).to.equal(ethers.utils.parseEther("2000"));
   })
 });
